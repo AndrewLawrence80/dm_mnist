@@ -5,5 +5,3 @@ from django.db import models
 
 class MNISTLabel(models.Model):
     label: int = models.IntegerField()
-    
-    
