@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import CanvasDraw from "react-canvas-draw";
+import b64toBlob from "./utils/b64_to_blob";
 
 const App = () => {
   const [labelMinist, setLabelMinist] = useState(null);
@@ -11,9 +12,10 @@ const App = () => {
 
   const handleDetect = () => {
     const imgBase64 = canvasDraw.current.getDataURL(".png");
-    console.log(imgBase64);
+    const imgBlob = b64toBlob(imgBase64);
+    console.log(imgBlob);
     setImg(() => {
-      return imgBase64;
+      return URL.createObjectURL(imgBlob);
     });
   };
   // useEffect(() => {
@@ -71,7 +73,12 @@ const App = () => {
               Detect
             </Button>
           </Box>
-          <Box component="img" sx={{ width: 800, height: 600 }} alt="export" src={img}/>
+          <Box
+            component="img"
+            sx={{ width: 800, height: 600 }}
+            alt="export"
+            src={img}
+          />
         </Box>
       </Container>
     </React.Fragment>
