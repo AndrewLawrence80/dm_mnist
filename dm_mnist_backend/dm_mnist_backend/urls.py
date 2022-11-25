@@ -1,4 +1,4 @@
-"""dm_mnist_django_web_backend URL Configuration
+"""dm_mnist_backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("mnist/", include("mnist.urls"))
+    path('api/mnist/', include('mnist_classify.urls'))
 ]
