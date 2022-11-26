@@ -8,18 +8,18 @@ class MNISTClassifyModel(nn.Module):
             nn.Conv2d(in_channels=1, out_channels=3,
                       kernel_size=7, stride=2, padding=3, bias=False),
             nn.LeakyReLU(),
-            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(3),
+            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.Conv2d(in_channels=3, out_channels=64,
                       kernel_size=5, stride=2, padding=2, bias=False),
             nn.LeakyReLU(),
-            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(64),
+            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.Conv2d(in_channels=64, out_channels=256,
                       kernel_size=3, stride=2, padding=1, bias=False),
             nn.LeakyReLU(),
-            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(256),
+            nn.MaxPool2d(kernel_size=3, stride=1, padding=1),
             nn.AdaptiveAvgPool2d(7)
         )
         self.flatten = nn.Flatten()

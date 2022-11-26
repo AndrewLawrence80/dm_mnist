@@ -22,7 +22,7 @@ def mnist_classify(request: Request) -> Response:
                 os.remove(img_path)
             serializer.save()
             prediction = predict(img_path)
-            print(prediction)
+            # print(prediction)
             return Response({"result": prediction}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
