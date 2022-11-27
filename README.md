@@ -1,5 +1,13 @@
 # React + Django + Pytorch Convolutional Neural Network Hand Writting Recongition Web App
 
+- [React + Django + Pytorch Convolutional Neural Network Hand Writting Recongition Web App](#react--django--pytorch-convolutional-neural-network-hand-writting-recongition-web-app)
+  - [A General Introduction](#a-general-introduction)
+  - [How to Use](#how-to-use)
+    - [Clone the repository](#clone-the-repository)
+    - [Miniconda (Recommended)](#miniconda-recommended)
+    - [NPM (Recommended)](#npm-recommended)
+    - [Try the Demo](#try-the-demo)
+
 ## A General Introduction
 
 **Attention: This web app is just a toy project which can not be used in production at all!**
